@@ -23,6 +23,13 @@ p {
   color: #fff;
 }
 
+.container {
+  max-width: 1100px;
+  padding: 20px 40px;
+  height: auto;
+}
+
+/*Section*/
 .hero {
   position: relative;
   height: 100%;
@@ -34,55 +41,62 @@ p {
   overflow: hidden;
 }
 
-.container {
-  max-width: 1100px;
-  padding: 20px 40px;
-  height: auto;
+/* logo */
+.logo {
+  animation: slideLeft 2s ease-in;
 }
 
+.logo p {
+  font-size: 15px;
+}
+
+/* Divider line */
 .line {
   width: 100%;
   height: 2px;
   background-color: orange;
 }
 
-.number {
+/* showcase */
+.showcase {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.number h1 {
+.showcase h1 {
   color: orange;
   font-weight: 600;
   letter-spacing: 0.2px;
+  animation: grow 4s infinite;
 }
 
-.big {
+.showcase .big {
   font-size: 60px;
 }
 
-.small {
+.showcase .small {
   font-size: 50px;
 }
 
-.number > p {
+.showcase p {
   margin-top: -20px;
   font-size: 30px;
   color: #fff;
+  animation: slideLeft 2s ease-in;
 }
 
 /* About */
-
 .about {
   margin: 80px 0;
+  animation: slideLeft 2s ease-in;
 }
 
-.about h1 {
-  font-size: 50px;
+.about h2 {
+  font-size: 40px;
 }
 
-.about > p {
+.about p {
   width: 400px;
   line-height: 1.2;
   text-align: justify;
@@ -92,31 +106,76 @@ p {
 }
 
 /* Button */
-.btn {
+.button {
   float: right;
   margin-top: -180px;
+  animation: slideRight 2s ease-in;
 }
 
-.btn input {
-  margin: 10px 0;
+.button a {
   padding: 10px 20px;
   border: none;
   outline: none;
   border-radius: 2em;
   font-weight: 600;
   font-size: 15px;
+  cursor: pointer;
+  background-color: #fff;
+  text-decoration: none;
+  color: #000;
 }
 
-/* Link */
+.button .fb {
+  margin: 10px 0;
+}
 
-.link {
+.button a:hover{
+  background-color: darkgreen;
+  color: #fff;
+}
+
+/* Footer */
+.footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.link a {
-  font-size: 20px;
+.footer p {
+  font-size: 15px;
+  animation: slideLeft 2s ease-in;
+}
+
+.footer a {
+  font-size: 15px;
   color: #fff;
   margin: 10px 0;
+  animation: grow 4s infinite;
+}
+
+/* Animation */
+@keyframes slideLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  
+  50% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(100%);
+  }
+  
+  50% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes grow {
+  50% {
+    transform: translateY(-5px) scale(1.1);
+  }
 }
