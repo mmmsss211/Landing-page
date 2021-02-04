@@ -8,6 +8,13 @@
 
 body {
   font-family: Poppins, Arial, Sans-Serif;
+  background-color: #1b2631;
+  background-image: url('../image/images.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  object-fit: cover;
 }
 
 h1,h2 {
@@ -24,7 +31,7 @@ p {
 }
 
 .container {
-  max-width: 1100px;
+  width: 100%;
   padding: 20px 40px;
   height: auto;
 }
@@ -35,12 +42,6 @@ p {
   height: 100%;
   width: 100%;
   overflow: hidden;
-  background-color: #1b2631;
-  background-image: url('../image/images.jpeg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  object-fit: cover;
 }
 
 /* logo */
