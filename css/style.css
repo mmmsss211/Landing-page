@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap');
 
 * {
   box-sizing: border-box;
@@ -6,10 +6,12 @@
   padding: 0;
 }
 
+
+
 body {
   font-family: Poppins, Arial, Sans-Serif;
   background-color: #1b2631;
-  background-image: url('../image/images.jpeg');
+  background-image: url('../image/hero-bg.webp');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -18,8 +20,6 @@ body {
 }
 
 h1,h2 {
-  line-height: 1.6;
-  margin: 5px 0;
   font-weight: 600;
   color: #fff;
   letter-spacing: 2px;
@@ -90,14 +90,23 @@ p {
   font-weight: 600;
 }
 
+.positiony {
+  width: 100%;
+}
+
+.flexy{
+  display: flex;
+}
+
 /* About */
-.about {
-  margin: 80px 0;
-  animation: slideLeft 2s ease-in;
+.about, .button {
+  width: 100%;
 }
 
 .about h2 {
-  font-size: 60px;
+  font-weight: 700;
+  font-size: 90px;
+  text-align: center;
 }
 
 .about p {
@@ -111,9 +120,9 @@ p {
 
 /* Button */
 .button {
-  float: right;
-  margin-top: -180px;
-  animation: slideRight 2s ease-in;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 .button a {
@@ -188,6 +197,7 @@ p {
 @media screen and (max-width: 500px) {
   .container {
     padding: 20px 20px;
+    height: 100vh;
   }
   
   .hero {
@@ -212,20 +222,7 @@ p {
     margin-left: auto;
   }
   
-  .about {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: auto;
-    margin-top: -5em;
-    padding: 70px 0;
-  }
   
-  .about h2 {
-    font-size: 30px;
-    text-align: center;
-  }
   
   .about p {
     width: auto;
